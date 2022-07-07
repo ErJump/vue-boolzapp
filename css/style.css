@@ -10,6 +10,8 @@
     /* outline: 1px solid red; */
 }
 
+/* background */
+
 div#green_bar{
     height: 100px;
     width: 100vw;
@@ -26,14 +28,13 @@ div#grey_bar{
     background-color: var(--ms_col_sec);
 }
 
-.ms_bg_grey{
-    background-color: var(--ms_col_fourth);
-}
 
 div#root div.container-lg{
     background-color: var(--ms_col_fourth);
     top: 5vh;
 }
+
+/* contacts column */
 
 div#user_section img{
     width: 15%
@@ -58,4 +59,19 @@ div.input-group>*{
     background-color: #ffffff;
 }
 
+div#contacts img{
+    width: 15%;
+}
 
+.ms_contact_border{
+    border-bottom: 1px solid var(--ms_col_fifth);
+}
+
+/* common classes */
+.ms_bg_grey{
+    background-color: var(--ms_col_fourth);
+}
+
+.ms_fs_08rem{
+    font-size: 0.8rem;
+}
