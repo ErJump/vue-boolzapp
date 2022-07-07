@@ -200,5 +200,10 @@ const app = new Vue({
             const time = timeSplitted[0] + ':' + timeSplitted[1];
             return time;
         },
+        //restituisce la data senza orario
+        getDateFromDate: function (date) {
+            const tempArray = date.split(" ");
+            return tempArray[0];
+        },         
     },
 });
