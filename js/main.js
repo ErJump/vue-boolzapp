@@ -170,6 +170,7 @@ const app = new Vue({
         },
         activeIndex: 0,
         newMessage: '',
+        searchValue:'',
     },
     methods: {
         //rende active index = all'indice clickato
@@ -182,15 +183,17 @@ const app = new Vue({
         },
         //aggiunge un messaggio alla chat
         pushNewUserMessage: function(message) {
-            this.contacts[this.activeIndex].messages.push({
-                date: new Date().toLocaleString(),
-                message: message,
-                status: 'sent'
-            });
+            const messageTrim = message.trim();
+            if(messageTrim != '') {
+                this.contacts[this.activeIndex].messages.push({
+                    date: new Date().toLocaleString(),
+                    message: message,
+                    status: 'sent'
+                });
+            };
             this.newMessage = '';
-            console.log(date);
         },
-        //restituisce l'orario dalla data sebza secondi
+        //restituisce l'orario dalla data senza secondi
         getTimeFromDate: function (date) {
             const tempArray = date.split(" ");
             const timeSplitted = tempArray[1].split(':');
