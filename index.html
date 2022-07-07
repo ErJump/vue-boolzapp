@@ -86,14 +86,13 @@
                             </div>
                         </div>
                         <!-- chat -->
-                        <div id="chat" class="flex-grow-1 px-5 py-2 d-flex flex-column">
-                            <div class="message_out clearfix">
-                                Hai portato a spasso il cane?
-                            </div>
-                            <div class="message_in ">
-                                Nope
+                        <div  id="chat" class="flex-grow-1 px-5 py-2 d-flex flex-column col-12">
+                            <div v-for="(message , index) in contacts[0].messages" :class="{messageOut : message.status == 'sent', messageIn : message.status == 'received' }">
+                                {{message.message}}
                             </div>
                         </div>
+                        <!-- user input -->
+                        <div id="user_input" class="col-12 p-2 d-flex"></div>
                     </div>
                 </div>
             </div>
