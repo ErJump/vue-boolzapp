@@ -7,7 +7,7 @@
 }
 
 *{
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 
 /* background */
@@ -44,7 +44,7 @@ div#user_section img{
     width: 15%
 }
 
-div#user_buttons>i, #contact_buttons>i{
+div#user_buttons>i, #contact_buttons>i, #user_input>i{
     color: var(--ms_col_fifth);
 }
 
@@ -76,6 +76,10 @@ div#contacts img{
     border-bottom: 1px solid lightgrey;
 }
 
+.ms_contact{
+    cursor: pointer;
+}
+
 /* Chat column */
 
 div#chat_column img{
@@ -104,7 +108,17 @@ div#chat{
     align-self: flex-start;
     justify-self: flex-start;
 }
+
+#user_input{
+    background-color: #F3EEEA;
+    height: 60px;
+}
+
+#user_input input{
+    height: 100%;
+}
 /* common classes */
+
 .ms_bg_grey{
     background-color: var(--ms_col_fourth);
 }
