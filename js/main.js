@@ -188,7 +188,8 @@ const app = new Vue({
                 this.contacts[this.activeIndex].messages.push({
                     date: new Date().toLocaleString(),
                     message: message,
-                    status: 'sent'
+                    status: 'sent',
+                    newUserMessageValue: true,
                 });
             };
             this.newMessage = '';
@@ -204,6 +205,17 @@ const app = new Vue({
         getDateFromDate: function (date) {
             const tempArray = date.split(" ");
             return tempArray[0];
-        },         
+        },
+        //il contact risponde al messaggio dell'utente
+        replyToMessage: function(message) {
+            if(message.newUserMessageValue == true){
+                this.contacts[this.activeIndex].messages.push({
+                    date: new Date().toLocaleString(),
+                    message: 'AHAHHAHAHAHAHAHAHAH... perché non ti rispondo?',
+                    status: 'received',
+                    newUserMessageValue: false,
+                }); 
+            }
+        }         
     },
 });
