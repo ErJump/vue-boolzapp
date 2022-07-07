@@ -7,7 +7,7 @@
 }
 
 *{
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 
 div#green_bar{
@@ -37,6 +37,17 @@ div#user_section img{
 
 div#user_buttons>i{
     color: var(--ms_col_fifth);
+}
+
+div#notification{
+    background-color: var(--ms_col_third);
+}
+
+i.fa-solid.fa-bell-slash{
+    color: var(--ms_col_third);
+    width: 50px;
+    height: 50px;
+    background-color: #f2fbff;
 }
 
 
