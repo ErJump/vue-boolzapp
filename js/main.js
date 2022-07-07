@@ -183,11 +183,12 @@ const app = new Vue({
         //aggiunge un messaggio alla chat
         pushNewUserMessage: function(message) {
             this.contacts[this.activeIndex].messages.push({
-                date: "",
+                date: new Date().toLocaleString(),
                 message: message,
                 status: 'sent'
             });
             this.newMessage = '';
+            console.log(date);
         },
         getTimeFromDate: function (date) {
             const tempArray = date.split(" ");

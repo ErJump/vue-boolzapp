@@ -48,6 +48,10 @@ div#user_buttons>i, #contact_buttons>i, #user_input>i{
     color: var(--ms_col_fifth);
 }
 
+div#user_buttons>i:hover, #contact_buttons>i:hover, #user_input>i:hover{
+    color: var(--ms_col_first);
+}
+
 div#notification{
     background-color: var(--ms_col_third);
 }
