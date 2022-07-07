@@ -190,9 +190,12 @@ const app = new Vue({
             this.newMessage = '';
             console.log(date);
         },
+        //restituisce l'orario dalla data sebza secondi
         getTimeFromDate: function (date) {
             const tempArray = date.split(" ");
-            return tempArray[1];
+            const timeSplitted = tempArray[1].split(':');
+            const time = timeSplitted[0] + ':' + timeSplitted[1];
+            return time;
         },
     },
 });
