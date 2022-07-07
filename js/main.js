@@ -188,6 +188,10 @@ const app = new Vue({
                 status: 'sent'
             });
             this.newMessage = '';
-        }
+        },
+        getTimeFromDate: function (date) {
+            const tempArray = date.split(" ");
+            return tempArray[1];
+        },
     },
 });

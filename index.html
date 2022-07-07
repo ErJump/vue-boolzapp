@@ -89,7 +89,7 @@
                         <div  id="chat" class="flex-grow-1 px-5 py-2 d-flex flex-column col-12">
                             <div v-for="(message , index) in contacts[activeIndex].messages" class="d-flex position-relative ms_w_40":class="{messageOut : message.status == 'sent', messageIn : message.status == 'received' }">
                                 <span class="w-75">{{message.message}}</span>
-                                <span class="ms_time_message position-absolute ms_fs_05rem">12.00</span>
+                                <span class="ms_time_message position-absolute ms_fs_05rem">{{getTimeFromDate(message.date)}}</span>
                             </div>
                         </div>
                         <!-- user input -->
