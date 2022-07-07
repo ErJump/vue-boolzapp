@@ -1,0 +1,42 @@
+:root{
+    --ms_col_first: #009688;
+    --ms_col_sec: #DADBD3;
+    --ms_col_third: #8EDAFC;
+    --ms_col_fourth: #EAEAEA;
+    --ms_col_fifth: #b1b1b1;
+}
+
+*{
+    outline: 1px solid red;
+}
+
+div#green_bar{
+    height: 100px;
+    width: 100vw;
+    background-color: var(--ms_col_first);
+    top: 0;
+    left: 0;
+}
+
+div#grey_bar{
+    top: 100px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--ms_col_sec);
+}
+
+div#root div.container-lg{
+    background-color: var(--ms_col_fourth);
+    top: 5vh;
+}
+
+div#user_section img{
+    width: 15%
+}
+
+div#user_buttons>i{
+    color: var(--ms_col_fifth);
+}
+
+

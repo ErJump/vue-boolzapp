@@ -15,6 +15,32 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
+    <div id="root" class="position-relative">
+        <div id="green_bar" class="position-absolute"></div>
+        <div id="grey_bar" class="position-absoulute"></div>
+        <div class="d-flex justify-content-center">
+            <div class="container-lg bg-white position-fixed" >
+                <div class="row">
+                    <div id='contacts_column' class="col-4 d-flex flex-column">
+                        <div id='user_section' class="col-12 p-2 d-flex justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <img src="img/avatar_io.jpg" alt="" class="w-10 rounded-circle">
+                                <h5 class="mb-0 ms-2">Sofia</h5>
+                            </div>
+                            <div id='user_buttons' class="d-flex align-items-center justify-content-around w-25">
+                                <i class="fa-solid fa-circle-notch fs-5"></i>
+                                <i class="fa-solid fa-message fs-5"></i>
+                                <i class="fas fa-ellipsis-v fs-5"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div id='chat_column' class="col-8">
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>
