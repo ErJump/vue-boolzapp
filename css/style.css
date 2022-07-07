@@ -7,7 +7,7 @@
 }
 
 *{
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
 }
 
 /* background */
@@ -84,8 +84,23 @@ div#chat_column img{
 
 div#chat{
     overflow-y: scroll;
-    height: 70vh;
     background-image: url(../img/mine.jpg);
+}
+
+.message_out{
+    background-color: #D5F9BA;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    align-self: flex-end;   
+}
+
+.message_in{
+    background-color: #F2FBFF;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    align-self: flex-start;
 }
 /* common classes */
 .ms_bg_grey{
@@ -103,3 +118,7 @@ div#chat{
 .ms_w_30{
     width: 15%;
 }
+
+.clearfix {
+    overflow: auto;
+  }
