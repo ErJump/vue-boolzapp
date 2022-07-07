@@ -168,5 +168,11 @@ const app = new Vue({
             name: 'Sofia',
             avatar: '_io',
         },
+        activeIndex: 0,
+    },
+    methods: {
+        setActiveIndex: function(index) {
+            this.activeIndex = index;
+        }
     },
 });
