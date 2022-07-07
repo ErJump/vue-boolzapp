@@ -109,6 +109,11 @@ div#chat{
     justify-self: flex-start;
 }
 
+.ms_time_message{
+    bottom: 5%;
+    right: 5%;
+}
+
 #user_input{
     background-color: #F3EEEA;
     height: 60px;
@@ -125,6 +130,10 @@ div#chat{
 
 .ms_fs_08rem{
     font-size: 0.8rem;
+}
+
+.ms_fs_05rem{
+    font-size: 0.5rem;
 }
 
 .ms_border_left{
