@@ -34,13 +34,17 @@ div#root div.container-lg{
     top: 5vh;
 }
 
+#user_section, #contact_info{
+    height: 80px;
+}
+
 /* contacts column */
 
 div#user_section img{
     width: 15%
 }
 
-div#user_buttons>i{
+div#user_buttons>i, #contact_buttons>i{
     color: var(--ms_col_fifth);
 }
 
@@ -59,14 +63,30 @@ div.input-group>*{
     background-color: #ffffff;
 }
 
+div#contacts{
+    overflow-y: scroll;
+    height: 70vh;
+}
+
 div#contacts img{
     width: 15%;
 }
 
 .ms_contact_border{
-    border-bottom: 1px solid var(--ms_col_fifth);
+    border-bottom: 1px solid lightgrey;
 }
 
+/* Chat column */
+
+div#chat_column img{
+    width: 10%;
+}
+
+div#chat{
+    overflow-y: scroll;
+    height: 70vh;
+    background-image: url(../img/mine.jpg);
+}
 /* common classes */
 .ms_bg_grey{
     background-color: var(--ms_col_fourth);
@@ -74,4 +94,12 @@ div#contacts img{
 
 .ms_fs_08rem{
     font-size: 0.8rem;
+}
+
+.ms_border_left{
+    border-left: 1px solid lightgrey;
+}
+
+.ms_w_30{
+    width: 15%;
 }

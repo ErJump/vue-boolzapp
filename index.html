@@ -21,10 +21,12 @@
         <div class="d-flex justify-content-center">
             <div class="container-lg bg-white position-fixed" >
                 <div class="row">
+                    <!-- left column -->
                     <div id='contacts_column' class="col-4 d-flex flex-column px-0">
+                        <!-- user section -->
                         <div id='user_section' class="col-12 p-2 d-flex justify-content-between ms_bg_grey">
                             <div class="d-flex align-items-center">
-                                <img src="img/avatar_io.jpg" alt="" class="w-10 rounded-circle">
+                                <img src="img/avatar_io.jpg" alt="" class="rounded-circle">
                                 <h5 class="mb-0 ms-2 fs-6">{{user.name}}</h5>
                             </div>
                             <div id='user_buttons' class="d-flex align-items-center justify-content-around w-25 ">
@@ -33,6 +35,7 @@
                                 <i class="fas fa-ellipsis-v fs-5"></i>
                             </div>
                         </div>
+                        <!-- notifications cta -->
                         <div id="notification" class="col-12 p-3 d-flex">
                             <div>
                                 <i class="fa-solid fa-bell-slash rounded-circle d-flex align-items-center justify-content-center fs-4"></i>
@@ -42,12 +45,14 @@
                                 <a href="#" class="text-muted">Attiva notifiche desktop</a>
                             </div>
                         </div>
+                        <!-- search bar -->
                         <div id="search_bar" class="ms_bg_grey">
                             <div class="input-group p-2">
                                 <button class="btn px-4 " type="button"><i class="fa-solid fa-magnifying-glass text-black-50"></i></button>
                                 <input type="text" class="form-control border-0" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
                             </div>
                         </div>
+                        <!-- contacts -->
                         <div id="contacts" class="col-12 flex-grow-1">
                             <div v-for="(contact, index) in contacts" class="ms_contact px-2 py-3 ms_contact_border d-flex">
                                 <div class="d-flex align-items-center">
@@ -61,10 +66,29 @@
                                     <span class="ms_fs_08rem text-black-50">{{contact.messages[contact.messages.length - 1].date}}</span>
                                 </div>
                             </div>
-                            
                         </div>
                     </div>
-                    <div id='chat_column' class="col-8">
+                    <!-- right column  -->
+                    <div id='chat_column' class="col-8 d-flex flex-column px-0 ms_border_left">
+                        <!-- contact info -->
+                        <div id="contact_info" class=" col-12 p-2 d-flex justify-content-between ms_bg_grey">
+                            <div class="d-flex align-items-center">
+                                <img :src="'img/avatar' + contacts[0].avatar + '.jpg'" alt="" class="rounded-circle">
+                                <div class="ms-2">
+                                    <h5 class="mb-0 fs-6">{{contacts[0].name}}</h5>
+                                    <span>Ultimo accesso oggi alle 12:00</span>
+                                </div>
+                            </div>
+                            <div id='contact_buttons' class="d-flex align-items-center justify-content-around ms_w_30 ">
+                                <i class="fa-solid fa-magnifying-glass fs-5"></i>
+                                <i class="fa-solid fa-paperclip fs-5"></i>
+                                <i class="fas fa-ellipsis-v fs-5"></i>
+                            </div>
+                        </div>
+                        <!-- chat -->
+                        <div id="chat" class="flex-grow-1 d-flex px-5 py-2">
+                            
+                        </div>
                     </div>
                 </div>
             </div>
