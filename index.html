@@ -26,7 +26,7 @@
                         <!-- user section -->
                         <div id='user_section' class="col-12 p-2 d-flex justify-content-between ms_bg_grey">
                             <div class="d-flex align-items-center">
-                                <img src="img/avatar_io.jpg" alt="" class="rounded-circle">
+                                <img :src="completeImgPath(user.avatar)" alt="" class="rounded-circle">
                                 <h5 class="mb-0 ms-2 fs-6">{{user.name}}</h5>
                             </div>
                             <div id='user_buttons' class="d-flex align-items-center justify-content-around w-25 ">
@@ -56,7 +56,7 @@
                         <div id="contacts" class="col-12 flex-grow-1">
                             <div v-for="(contact, index) in contacts" class="ms_contact px-2 py-3 ms_contact_border d-flex" @click="setActiveIndex(index)">
                                 <div class="d-flex align-items-center">
-                                    <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="" class="w-10 rounded-circle">
+                                    <img :src="completeImgPath(contact.avatar)" alt="" class="w-10 rounded-circle">
                                     <div class="ms-2 d-flex flex-column">
                                         <span class="fs-6">{{contact.name}}</span>
                                         <span class="ms_fs_08rem text-black-50">{{contact.messages[contact.messages.length - 1].message}}</span>
@@ -73,7 +73,7 @@
                         <!-- contact info -->
                         <div id="contact_info" class=" col-12 p-2 d-flex justify-content-between ms_bg_grey">
                             <div class="d-flex align-items-center">
-                                <img :src="'img/avatar' + contacts[activeIndex].avatar + '.jpg'" alt="" class="rounded-circle">
+                                <img :src="completeImgPath(contacts[activeIndex].avatar)" alt="" class="rounded-circle">
                                 <div class="ms-2">
                                     <h5 class="mb-0 fs-6">{{contacts[activeIndex].name}}</h5>
                                     <span>Ultimo accesso oggi alle 12:00</span>

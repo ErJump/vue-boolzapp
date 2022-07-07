@@ -171,8 +171,13 @@ const app = new Vue({
         activeIndex: 0,
     },
     methods: {
+        //rende active index = all'indice clickato
         setActiveIndex: function(index) {
             this.activeIndex = index;
+        },
+        //completa il path per l'avatar
+        completeImgPath: function(img) {
+            return 'img/avatar' + img + '.jpg';
         }
     },
 });
