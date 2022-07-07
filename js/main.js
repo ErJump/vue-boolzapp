@@ -165,7 +165,7 @@ const app = new Vue({
             }
         ],
         user : {
-            name: 'Sofia',
+            name: 'Jump',
             avatar: '_io',
         },
         activeIndex: 0,

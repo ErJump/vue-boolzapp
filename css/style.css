@@ -131,10 +131,10 @@ div#chat{
     border-left: 1px solid lightgrey;
 }
 
-.ms_w_30{
+.ms_w_15{
     width: 15%;
 }
 
-.clearfix {
-    overflow: auto;
-  }
+.ms_w_40{
+    width: 40%;
+}
