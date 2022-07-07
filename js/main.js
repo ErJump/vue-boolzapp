@@ -169,6 +169,7 @@ const app = new Vue({
             avatar: '_io',
         },
         activeIndex: 0,
+        newMessage: '',
     },
     methods: {
         //rende active index = all'indice clickato
@@ -178,6 +179,15 @@ const app = new Vue({
         //completa il path per l'avatar
         completeImgPath: function(img) {
             return 'img/avatar' + img + '.jpg';
+        },
+        //aggiunge un messaggio alla chat
+        pushNewUserMessage: function(message) {
+            this.contacts[this.activeIndex].messages.push({
+                date: "",
+                message: message,
+                status: 'sent'
+            });
+            this.newMessage = '';
         }
     },
 });

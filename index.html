@@ -94,7 +94,8 @@
                         <!-- user input -->
                         <div id="user_input" class="col-12 p-2 d-flex justify-content-around align-items-center">
                             <i class="fa-solid fa-face-smile fs-4"></i>
-                            <input type="text" class="w-75 bg-white border-0 px-4 rounded-3" placeholder="Scrivi un messaggio" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                            <input type="text" class="w-75 bg-white border-0 px-4 rounded-3" placeholder="Scrivi un messaggio" aria-label="Example text with button addon" aria-describedby="button-addon1"
+                            v-model="newMessage" @keyup.enter="pushNewUserMessage(newMessage)">
                             <i class="fa-solid fa-microphone fs-4"></i>
                         </div>
                     </div>
