@@ -131,7 +131,7 @@ div#chat{
     bottom: -100px;
     right: 0px;
     z-index: 1;
-    background-color: lightgrey;
+    background-color: white;
     display: none;
 }
 
@@ -145,7 +145,7 @@ div#chat{
 }
 
 .ms_toggle_menu>*:hover{
-    background-color: #f2fbff;
+    background-color: #d8d8d8;
     cursor: pointer;
 }
 

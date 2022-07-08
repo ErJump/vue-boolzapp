@@ -293,7 +293,11 @@ const app = new Vue({
         },
         //cancella il messaggio selezionato
         delMessage: function(index) {
+            if(this.contacts[this.activeIndex].messages.length != 1) {
             this.contacts[this.activeIndex].messages.splice(index, 1);
-        }
+            } else {
+                alert('Deve rimanere almeno un messagggio nella chat');
+            }
+        },
     },
 });
