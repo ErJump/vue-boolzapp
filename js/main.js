@@ -291,6 +291,9 @@ const app = new Vue({
         resetToggle: function() {
             this.toggle = {contactIndex : null, messageIndex: null};
         },
-        
+        //cancella il messaggio selezionato
+        delMessage: function(index) {
+            this.contacts[this.activeIndex].messages.splice(index, 1);
+        }
     },
 });
