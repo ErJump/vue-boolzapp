@@ -7,7 +7,7 @@
 }
 
 *{
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
 }
 
 /* background */
@@ -32,6 +32,7 @@ div#grey_bar{
 div#root div.container-lg{
     background-color: var(--ms_col_fourth);
     top: 5vh;
+    height: 75vh;
 }
 
 #user_section, #contact_info{
@@ -70,6 +71,7 @@ div.input-group>*{
 div#contacts{
     overflow-y: scroll;
     height: 70vh;
+    background-color: white;
 }
 
 div#contacts img{
@@ -93,6 +95,7 @@ div#chat_column img{
 div#chat{
     overflow-y: scroll;
     background-image: url(../img/mine.jpg);
+    height: 70vh;
 }
 
 .messageOut{
