@@ -236,5 +236,15 @@ const app = new Vue({
                 this.replyToMessage(message);
             }, 1000);
         }, 
+        //cerca un contatto
+        searchContact: function(searchValue) {
+            this.contacts.forEach(contact => {
+                if(contact.name.toLowerCase().includes(searchValue.toLowerCase())) {
+                    contact.visible = true;
+                } else {
+                    contact.visible = false;
+                }
+            });
+        }
     },
 });

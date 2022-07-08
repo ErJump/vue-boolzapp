@@ -50,12 +50,13 @@
                             <div class="input-group p-2">
                                 <button class="btn px-4 " type="button"><i class="fa-solid fa-magnifying-glass text-black-50"></i></button>
                                 <input type="text" class="form-control border-0" placeholder="Cerca o inizia nuova chat" aria-label="Example text with button addon" aria-describedby="button-addon1"
-                                v-model="searchValue">
+                                v-model="searchValue" @keyUp="searchContact(searchValue)">
                             </div>
                         </div>
                         <!-- contacts -->
                         <div id="contacts" class="col-12 flex-grow-1">
-                            <div v-for="(contact, index) in contacts" class="ms_contact px-2 py-3 ms_contact_border d-flex" @click="setActiveIndex(index)">
+                            <div v-for="(contact, index) in contacts" class="ms_contact px-2 py-3 ms_contact_border d-flex" @click="setActiveIndex(index)"
+                            v-if="contact.visible == true">
                                 <div class="d-flex align-items-center">
                                     <img :src="completeImgPath(contact.avatar)" alt="" class="w-10 rounded-circle">
                                     <div class="ms-2 d-flex flex-column">
