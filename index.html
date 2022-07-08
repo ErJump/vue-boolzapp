@@ -94,7 +94,7 @@
                                 <span class="w-75">{{message.message}}</span>
                                 <span class="ms_time_message position-absolute ms_fs_05rem">{{getTimeFromDate(message.date)}}</span>
                                 <div class="position-absolute ms_toggle_menu shadow" :class="{activeToggle: isToggleActive(index)}">
-                                    <div class="p-3" @click="delMessage(index); resetToggle()">Elimina Messaggio</div>
+                                    <div class="p-3" @click.stop="delMessage(index); resetToggle()">Elimina Messaggio</div>
                                     <div class="p-3">Info Messaggio</div>
                                 </div>
                             </div>
