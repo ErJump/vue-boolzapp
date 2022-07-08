@@ -171,6 +171,14 @@ const app = new Vue({
         activeIndex: 0,
         newMessage: '',
         searchValue:'',
+        repliesList: [
+            'Scusa, ora non ti posso rispondere',
+            '???',
+            'Non ho capito',
+            'On Cracker Island it was born',
+            "I'm a scary gargoyle on a tower",
+        ],
+
     },
     methods: {
         //rende active index = all'indice clickato
@@ -206,22 +214,27 @@ const app = new Vue({
             const tempArray = date.split(" ");
             return tempArray[0];
         },
+        //restituisce un numero randomico tra 0 e la lunghezza del array
+        getRandomNumberWithArrayLength: function(array) {
+            return Math.floor(Math.random() * array.length);
+        },      
         //il contact risponde al messaggio dell'utente
         replyToMessage: function(message) {
+            const randomValue = this.getRandomNumberWithArrayLength(this.repliesList);
             if(message.newUserMessageValue == true){
                 this.contacts[this.activeIndex].messages.push({
                     date: new Date().toLocaleString(),
-                    message: 'AHAHHAHAHAHAHAHAHAH... perché non ti rispondo?',
+                    message: this.repliesList[randomValue],
                     status: 'received',
                     newUserMessageValue: false,
                 }); 
-            }
+            };
         },
         //mette un delay al reply message
         setDelayReply: function(message) {
             setTimeout(() => {
                 this.replyToMessage(message);
             }, 1000);
-        },       
+        }, 
     },
 });
