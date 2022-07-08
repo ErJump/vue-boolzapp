@@ -216,6 +216,12 @@ const app = new Vue({
                     newUserMessageValue: false,
                 }); 
             }
-        }         
+        },
+        //mette un delay al reply message
+        setDelayReply: function(message) {
+            setTimeout(() => {
+                this.replyToMessage(message);
+            }, 1000);
+        },       
     },
 });
