@@ -78,6 +78,10 @@ div#contacts img{
     width: 15%;
 }
 
+.ms_active{
+    background-color: #E9EBEB!important;
+}
+
 .ms_contact_border{
     border-bottom: 1px solid lightgrey;
 }

@@ -56,7 +56,7 @@
                         <!-- contacts -->
                         <div id="contacts" class="col-12 flex-grow-1">
                             <div v-for="(contact, index) in contacts" class="ms_contact px-2 py-3 ms_contact_border d-flex" @click="setActiveIndex(index)"
-                            v-if="contact.visible == true">
+                            v-if="contact.visible == true" :class="{ms_active : activeIndex == index}">
                                 <div class="d-flex align-items-center">
                                     <img :src="completeImgPath(contact.avatar)" alt="" class="w-10 rounded-circle">
                                     <div class="ms-2 d-flex flex-column">
