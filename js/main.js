@@ -298,6 +298,7 @@ const app = new Vue({
             } else {
                 alert('Deve rimanere almeno un messagggio nella chat');
             }
+            this.resetToggle();
         },
     },
 });
