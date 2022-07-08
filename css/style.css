@@ -125,6 +125,30 @@ div#chat{
     right: 5%;
 }
 
+.ms_toggle_menu{
+    width: 185px;
+    height: 125px;
+    bottom: -100px;
+    right: 0px;
+    z-index: 1;
+    background-color: lightgrey;
+    display: none;
+}
+
+.activeToggle{
+    display: block;
+}
+
+.ms_toggle_menu>*{
+    width: 100%;
+    height: 50%;
+}
+
+.ms_toggle_menu>*:hover{
+    background-color: #f2fbff;
+    cursor: pointer;
+}
+
 #user_input{
     background-color: #F3EEEA;
     height: 60px;

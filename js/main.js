@@ -10,17 +10,20 @@ const app = new Vue({
                     {
                         date: '10/01/2020 15:30:55',
                         message: 'Hai portato a spasso il cane?',
-                        status: 'sent'
+                        status: 'sent',
+                        toggle: false
                     },
                     {
                         date: '10/01/2020 15:50:00',
                         message: 'Ricordati di stendere i panni',
-                        status: 'sent'
+                        status: 'sent',
+                        toggle: false
                     },
                     {
                         date: '10/01/2020 16:15:22',
                         message: 'Tutto fatto!',
-                        status: 'received'
+                        status: 'received',
+                        toggle: false,
                     }
                 ],
             },
@@ -32,7 +35,7 @@ const app = new Vue({
                     {
                         date: '20/03/2020 16:30:00',
                         message: 'Ciao come stai?',
-                        status: 'sent'
+                        status: 'sent',
                     },
                     {
                         date: '20/03/2020 16:30:55',
@@ -210,12 +213,13 @@ const app = new Vue({
             'On Cracker Island it was born',
             "I'm a scary gargoyle on a tower",
         ],
-
+        toggle: {contactIndex : null, messageIndex: null},
     },
     methods: {
         //rende active index = all'indice clickato
         setActiveIndex: function(index) {
             this.activeIndex = index;
+            this.resetToggle();
         },
         //completa il path per l'avatar
         completeImgPath: function(img) {
@@ -277,6 +281,19 @@ const app = new Vue({
                     contact.visible = false;
                 }
             });
-        }
+        },
+        //cambia il toggle attivo
+        interactToggleMenu: function(index) {
+            this.toggle = {contactIndex : this.activeIndex, messageIndex: index};
+        },
+        //verifica che il toggle sia attivo
+        isToggleActive : function(index) {
+            return this.toggle.contactIndex == this.activeIndex && this.toggle.messageIndex == index;
+        },
+        //resetta il toggle
+        resetToggle: function() {
+            this.toggle = {contactIndex : null, messageIndex: null};
+        },
+        
     },
 });

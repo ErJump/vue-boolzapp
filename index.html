@@ -56,7 +56,7 @@
                         <!-- contacts -->
                         <div id="contacts" class="col-12 flex-grow-1">
                             <div v-for="(contact, index) in contacts" class="ms_contact px-2 py-3 ms_contact_border d-flex" @click="setActiveIndex(index)"
-                            v-if="contact.visible == true" :class="{ms_active : activeIndex == index}">
+                            v-if="contact.visible" :class="{ms_active : activeIndex == index}">
                                 <div class="d-flex align-items-center">
                                     <img :src="completeImgPath(contact.avatar)" alt="" class="w-10 rounded-circle">
                                     <div class="ms-2 d-flex flex-column">
@@ -88,10 +88,15 @@
                             </div>
                         </div>
                         <!-- chat -->
-                        <div  id="chat" class="flex-grow-1 px-5 py-2 d-flex flex-column col-12">
-                            <div v-for="(message , index) in contacts[activeIndex].messages" class="d-flex position-relative ms_w_40" :class="{messageOut : message.status == 'sent', messageIn : message.status == 'received' }">
+                        <div  id="chat" class="flex-grow-1 px-5 py-2 d-flex flex-column col-12" >
+                            <div v-for="(message , index) in contacts[activeIndex].messages" class="d-flex position-relative ms_w_40 position-relative" :class="{messageOut : message.status == 'sent', messageIn : message.status == 'received' }"
+                            @click="interactToggleMenu(index)">
                                 <span class="w-75">{{message.message}}</span>
                                 <span class="ms_time_message position-absolute ms_fs_05rem">{{getTimeFromDate(message.date)}}</span>
+                                <div class="position-absolute ms_toggle_menu" :class="{activeToggle: isToggleActive(index)}">
+                                    <div class="p-3">Elimina Messaggio</div>
+                                    <div class="p-3">Info Messaggio</div>
+                                </div>
                             </div>
                         </div>
                         <!-- user input -->
