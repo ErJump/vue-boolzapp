@@ -102,6 +102,10 @@ div#chat{
     height: 70vh;
 }
 
+div.d-flex.position-relative.ms_w_40:hover, div#user_buttons>i:hover, #contact_buttons>i:hover, #user_input>i:hover{
+    cursor: pointer;
+}
+
 .messageOut{
     background-color: #D5F9BA;
     border-radius: 10px;
