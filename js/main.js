@@ -162,7 +162,39 @@ const app = new Vue({
                         status: 'received'
                     }
                 ],
-            }
+            },
+            {
+                name: 'Murdoc Niccals',
+                avatar: '_9',
+                visible: true,
+                messages: [
+                    {
+                        date: '9/01/2020 14:30:50',
+                        message: 'Stripping for cash is yet another of my many talents',
+                        status: 'received'
+                    },
+                    {
+                        date: '9/01/2020 14:31:10',
+                        message: 'Really?',
+                        status: 'sent'
+                    },
+                    {
+                        date: '9/01/2020 14:31:55',
+                        message: 'Yes',
+                        status: 'received'
+                    },
+                    {
+                        date: '9/01/2020 14:32:30',
+                        message: "You know, success doesn't bring happiness. Only material stuff like money, cars and iPods can do that. And I've already got all that. So I have to find other ways to amuse myself.",
+                        status: 'received'
+                    },
+                    {
+                        date: '9/01/2020 14:32:40',
+                        message: "Ahahahahahahahah",
+                        status: 'sent'
+                    },
+                ],
+            },
         ],
         user : {
             name: 'Jump',
