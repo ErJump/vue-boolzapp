@@ -311,6 +311,14 @@ const app = new Vue({
             } else {
                 this.userIsWriting = false;
             }
+        },
+        //sposta il contatto in cima alla lista dei contatti
+        moveContactToTop: function() {
+            const tempContact = this.contacts[this.activeIndex];
+            this.contacts.splice(this.activeIndex, 1);
+            this.contacts.unshift(tempContact);
+            this.activeIndex = 0;
         }
+        
     },
 });
