@@ -212,6 +212,7 @@ const app = new Vue({
         ],
         toggle: {contactIndex : null, messageIndex: null},
         contactIsReplying: false,
+        userIsWriting: false,
     },
     methods: {
         //rende active index = all'indice clickato
@@ -303,5 +304,13 @@ const app = new Vue({
             }
             this.resetToggle();
         },
+        //controlla se l'utente sta scrivendo
+        isUserWriting: function() {
+            if(this.newMessage.length > 0) {
+                this.userIsWriting = true;
+            } else {
+                this.userIsWriting = false;
+            }
+        }
     },
 });
