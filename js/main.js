@@ -211,6 +211,7 @@ const app = new Vue({
             "I'm a scary gargoyle on a tower",
         ],
         toggle: {contactIndex : null, messageIndex: null},
+        contactIsReplying: false,
     },
     methods: {
         //rende active index = all'indice clickato
@@ -265,8 +266,10 @@ const app = new Vue({
         },
         //mette un delay al reply message
         setDelayReply: function(message) {
+            this.contactIsReplying = true;
             setTimeout(() => {
                 this.replyToMessage(message);
+                this.contactIsReplying = false;
             }, 1000);
         }, 
         //cerca un contatto
