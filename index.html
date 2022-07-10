@@ -98,6 +98,7 @@
                                     <div class="p-3" @click.stop="delMessage(index); resetToggle()">Elimina Messaggio</div>
                                     <div class="p-3">Info Messaggio</div>
                                 </div>
+                                <div v-show="isLastContactMessage(contacts[activeIndex].messages) == index" class="ms_tail tailReceived position-absolute"></div>
                             </div>
                         </div>
                         <!-- user input -->

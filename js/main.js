@@ -318,7 +318,19 @@ const app = new Vue({
             this.contacts.splice(this.activeIndex, 1);
             this.contacts.unshift(tempContact);
             this.activeIndex = 0;
-        }
-        
+        },
+        //verifica la posizione dell'ultimo messaggio del contatto
+        isLastContactMessage: function(array) {
+            let i = array.length - 1;
+            let isLast = false;
+            while (isLast == false || i == 0) {
+                if(array[i].status == 'received') {
+                    isLast = true;
+                } else {
+                    i--;
+                }
+            }
+            return i;
+        },
     },
 });
