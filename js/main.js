@@ -327,6 +327,7 @@ const app = new Vue({
             while (isLast == false || i == 0) {
                 if(array[i].status == 'received') {
                     isLast = true;
+                    return i;
                 } else {
                     i--;
                 }
