@@ -55,7 +55,7 @@
                         </div>
                         <!-- contacts -->
                         <div id="contacts" class="col-12 flex-grow-1">
-                            <div v-for="(contact, index) in contacts" class="ms_contact px-2 py-3 ms_contact_border d-flex" @click="setActiveIndex(index)"
+                            <div v-for="(contact, index) in contacts" class="ms_contact px-2 py-3 ms_contact_border d-flex" @click="setActiveIndex(index); resetLastUserMessageIndex()"
                             v-if="contact.visible" :class="{ms_active : activeIndex == index}">
                                 <div class="d-flex align-items-center">
                                     <img :src="completeImgPath(contact.avatar)" alt="" class="w-10 rounded-circle">
@@ -98,8 +98,8 @@
                                     <div class="p-3" @click.stop="delMessage(index); resetToggle()">Elimina Messaggio</div>
                                     <div class="p-3">Info Messaggio</div>
                                 </div>
-                                <div v-show="isLastContactMessage(contacts[activeIndex].messages) == index" class="ms_tail tailReceived position-absolute"></div>
-                                <div v-show="isLastUserMessage(contacts[activeIndex].messages) == index" class="ms_tail tailSent position-absolute"></div>
+                                <div v-if="isLastContactMessage(contacts[activeIndex].messages) == index" class="ms_tail tailReceived position-absolute"></div>
+                                <!-- <div v-if="isLastUserMessage(contacts[activeIndex].messages) == index" class="ms_tail tailSent position-absolute"></div> -->
                             </div>
                         </div>
                         <!-- user input -->
