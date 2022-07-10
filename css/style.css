@@ -153,7 +153,7 @@ div.d-flex.position-relative.ms_w_40:hover, div#user_buttons>i:hover, #contact_b
     height: 125px;
     bottom: -100px;
     right: 0px;
-    z-index: 1;
+    z-index: 2;
     background-color: white;
     display: none;
 }
@@ -205,4 +205,8 @@ div.d-flex.position-relative.ms_w_40:hover, div#user_buttons>i:hover, #contact_b
 
 .ms_w_40{
     width: 40%;
+}
+
+.ms_z_index_1{
+    z-index: 1;
 }
