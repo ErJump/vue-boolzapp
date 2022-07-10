@@ -337,9 +337,10 @@ const app = new Vue({
         isLastUserMessage: function(array) {
             this.lastUserMessageIndex = array.length - 1;
             let isLast = false;
-            while (isLast == false || this.lastUserMessageIndex == 0) {
+            while (isLast == false || this.lastUserMessageIndex >= 0) {
                 if(array[this.lastUserMessageIndex].status == 'sent') {
                     isLast = true;
+                    return this.lastUserMessageIndex;
                 } else {
                     this.lastUserMessageIndex--;
                 }
