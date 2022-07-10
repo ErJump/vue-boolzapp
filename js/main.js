@@ -319,12 +319,25 @@ const app = new Vue({
             this.contacts.unshift(tempContact);
             this.activeIndex = 0;
         },
-        //verifica la posizione dell'ultimo messaggio del contatto
+        //verifica la posizione dell'ultimo messaggio del contatto nella chat attiva
         isLastContactMessage: function(array) {
             let i = array.length - 1;
             let isLast = false;
             while (isLast == false || i == 0) {
                 if(array[i].status == 'received') {
+                    isLast = true;
+                } else {
+                    i--;
+                }
+            }
+            return i;
+        },
+        //verifica la posizione dell'ultimo messaggio dell'utente nella chat attiva
+        isLastUserMessage: function(array) {
+            let i = array.length - 1;
+            let isLast = false;
+            while (isLast == false || i == 0) {
+                if(array[i].status == 'sent') {
                     isLast = true;
                 } else {
                     i--;

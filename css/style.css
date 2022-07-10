@@ -129,6 +129,25 @@ div.d-flex.position-relative.ms_w_40:hover, div#user_buttons>i:hover, #contact_b
     right: 5%;
 }
 
+.ms_tail {
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;  
+}
+
+.tailReceived{
+    bottom: 0;
+    left: -10px;
+    border-bottom: 20px solid #F2FBFF;
+}
+
+.tailSent{
+    bottom: 0;
+    right: -10px;
+    border-bottom: 20px solid #D5F9BA;
+}
+
 .ms_toggle_menu{
     width: 185px;
     height: 125px;
@@ -186,17 +205,4 @@ div.d-flex.position-relative.ms_w_40:hover, div#user_buttons>i:hover, #contact_b
 
 .ms_w_40{
     width: 40%;
-}
-
-.ms_tail {
-    width: 0; 
-    height: 0; 
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;  
-}
-
-.tailReceived{
-    bottom: 0;
-    left: -10px;
-    border-bottom: 10px solid #F2FBFF;
 }
