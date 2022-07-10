@@ -213,7 +213,6 @@ const app = new Vue({
         toggle: {contactIndex : null, messageIndex: null},
         contactIsReplying: false,
         userIsWriting: false,
-        lastUserMessageIndex:  0,
     },
     methods: {
         //rende active index = all'indice clickato
@@ -321,32 +320,22 @@ const app = new Vue({
             this.activeIndex = 0;
         },
         //verifica la posizione dell'ultimo messaggio del contatto nella chat attiva
-        isLastContactMessage: function(array) {
-            let i = array.length - 1;
-            let isLast = false;
-            while (isLast == false || i == 0) {
+        getLastContactMessageIndex: function(array) {
+            for (let i = array.length - 1; i >= 0; i--) {
                 if(array[i].status == 'received') {
-                    isLast = true;
                     return i;
-                } else {
-                    i--;
                 }
             }
-            return i;
+            return -1;
         },
         //verifica la posizione dell'ultimo messaggio dell'utente nella chat attiva
-        isLastUserMessage: function(array) {
-            this.lastUserMessageIndex = array.length - 1;
-            let isLast = false;
-            while (isLast == false || this.lastUserMessageIndex >= 0) {
-                if(array[this.lastUserMessageIndex].status == 'sent') {
-                    isLast = true;
-                    return this.lastUserMessageIndex;
-                } else {
-                    this.lastUserMessageIndex--;
+        getLastUserMessageIndex: function(array) {
+            for (let i = array.length - 1; i >= 0; i--){
+                if(array[i].status == 'sent') {
+                    return i;
                 }
             }
-            return this.lastUserMessageIndex;
+            return -1;
         },
         //resetta lastUserMessageIndex
         resetLastUserMessageIndex: function() {
