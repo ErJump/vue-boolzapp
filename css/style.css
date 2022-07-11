@@ -32,7 +32,7 @@ div#grey_bar{
 div#root div.container-lg{
     background-color: var(--ms_col_fourth);
     top: 5vh;
-    height: 75vh;
+    height: 70vh;
 }
 
 #user_section, #contact_info{
@@ -70,7 +70,7 @@ div.input-group>*{
 
 div#contacts{
     overflow-y: scroll;
-    height: 70vh;
+    height: 60vh;
     background-color: white;
 }
 
@@ -99,6 +99,7 @@ div#chat_column img{
 div#chat{
     overflow-y: scroll;
     background-image: url(../img/mine.jpg);
+    min-height: 20vh;
     height: 70vh;
 }
 
