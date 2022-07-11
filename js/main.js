@@ -339,8 +339,13 @@ const app = new Vue({
             }
             return -1;
         },
+        //cambia il booleano di emojiMenu
         emojiMenuStatusSwitch: function() {
             this.emojiMenu = !this.emojiMenu;
+        },
+        //aggiunge l'emoji al newMessage
+        addEmojiToNewMessage: function(emoji) {
+            this.newMessage += emoji;
         }
     },
 });

@@ -105,7 +105,7 @@
                         <!-- user input -->
                         <div id="user_input" class="col-12 p-2 d-flex justify-content-around align-items-center position-relative">
                             <div class="position-absolute ms_emoji_menu p-4 flex-wrap" :class="{'activeMenuEmoji' : emojiMenu == true}">
-                                <div v-for="(emoji, index) in emojiList" class="emoji">{{emoji}}</div>
+                                <div v-for="emoji in emojiList" class="emoji" @click='addEmojiToNewMessage(emoji); isUserWriting()'>{{emoji}}</div>
                             </div>
                             <i @click="emojiMenuStatusSwitch()" class="fa-solid fa-face-smile fs-4"></i>
                             <input type="text" class="w-75 bg-white border-0 px-4 rounded-3" placeholder="Scrivi un messaggio" aria-label="Example text with button addon" aria-describedby="button-addon1"
