@@ -238,6 +238,7 @@ const app = new Vue({
                 });
             };
             this.newMessage = '';
+            this.emojiMenu = false;
         },
         //restituisce l'orario dalla data senza secondi
         getTimeFromDate: function (date) {
