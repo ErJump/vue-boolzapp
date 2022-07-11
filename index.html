@@ -104,10 +104,10 @@
                         </div>
                         <!-- user input -->
                         <div id="user_input" class="col-12 p-2 d-flex justify-content-around align-items-center position-relative">
-                            <div class="position-absolute ms_emoji_menu p-4 d-flex flex-wrap">
+                            <div class="position-absolute ms_emoji_menu p-4 flex-wrap" :class="{'activeMenuEmoji' : emojiMenu == true}">
                                 <div v-for="(emoji, index) in emojiList" class="emoji">{{emoji}}</div>
                             </div>
-                            <i class="fa-solid fa-face-smile fs-4"></i>
+                            <i @click="emojiMenuStatusSwitch()" class="fa-solid fa-face-smile fs-4"></i>
                             <input type="text" class="w-75 bg-white border-0 px-4 rounded-3" placeholder="Scrivi un messaggio" aria-label="Example text with button addon" aria-describedby="button-addon1"
                             v-model="newMessage" @keyup.enter="pushNewUserMessage(newMessage); setDelayReply(contacts[activeIndex].messages[contacts[activeIndex].messages.length - 1]); moveContactToTop()"
                             @keyUp="isUserWriting()">

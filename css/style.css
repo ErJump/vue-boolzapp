@@ -190,6 +190,11 @@ div.d-flex.position-relative.ms_w_40:hover, div#user_buttons>i:hover, #contact_b
     left: 0;
     z-index: 3;
     overflow-y: auto;
+    display: none;
+}
+
+.activeMenuEmoji{
+    display: flex;
 }
 
 .emoji{
