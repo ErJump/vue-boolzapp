@@ -29,7 +29,7 @@
                                 <img :src="completeImgPath(user.avatar)" alt="" class="rounded-circle">
                                 <h5 class="mb-0 ms-2 fs-6">{{user.name}}</h5>
                             </div>
-                            <div id='user_buttons' class="d-flex align-items-center justify-content-around ms_w_40 ">
+                            <div id='user_buttons' class="d-flex align-items-center justify-content-around ms_w_40">
                                 <i class="fa-solid fa-circle-notch fs-5"></i>
                                 <i class="fa-solid fa-message fs-5"></i>
                                 <i class="fas fa-ellipsis-v fs-5"></i>
@@ -55,7 +55,7 @@
                         </div>
                         <!-- contacts -->
                         <div id="contacts" class="col-12 flex-grow-1">
-                            <div v-for="(contact, index) in contacts" class="ms_contact px-2 py-3 ms_contact_border d-flex" @click="setActiveIndex(index); resetLastUserMessageIndex()"
+                            <div v-for="(contact, index) in contacts" class="ms_contact px-2 py-3 ms_contact_border d-flex" @click="setActiveIndex(index)"
                             v-if="contact.visible" :class="{ms_active : activeIndex == index}">
                                 <div class="d-flex align-items-center">
                                     <img :src="completeImgPath(contact.avatar)" alt="" class="w-10 rounded-circle">

@@ -337,9 +337,5 @@ const app = new Vue({
             }
             return -1;
         },
-        //resetta lastUserMessageIndex
-        resetLastUserMessageIndex: function() {
-            this.lastUserMessageIndex = 0;
-        }
     },
 });
