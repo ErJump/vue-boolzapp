@@ -296,7 +296,9 @@ const app = new Vue({
         },
         //cambia il toggle attivo
         interactToggleMenu: function(index) {
-            this.toggle = {contactIndex : this.activeIndex, messageIndex: index};
+            if(this.contacts[this.activeIndex].messages[0].status != 'default'){
+                this.toggle = {contactIndex : this.activeIndex, messageIndex: index};
+            }
         },
         //verifica che il toggle sia attivo
         isToggleActive : function(index) {
