@@ -28,7 +28,6 @@ div#grey_bar{
     background-color: var(--ms_col_sec);
 }
 
-
 div#root div.container-lg{
     background-color: var(--ms_col_fourth);
     top: 5vh;
@@ -105,6 +104,19 @@ div#chat{
 
 div.d-flex.position-relative.ms_w_40:hover, div#user_buttons>i:hover, #contact_buttons>i:hover, #user_input>i:hover{
     cursor: pointer;
+}
+
+.defaultMessage{
+    background-color: rgb(153, 153, 153);
+    color : white;
+    border-radius: 10px;
+    width: 50%;
+    padding: 10px;
+    margin: 10px;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    justify-content: center!important;
 }
 
 .messageOut{

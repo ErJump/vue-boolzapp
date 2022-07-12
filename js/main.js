@@ -242,15 +242,23 @@ const app = new Vue({
         },
         //restituisce l'orario dalla data senza secondi
         getTimeFromDate: function (date) {
-            const tempArray = date.split(" ");
-            const timeSplitted = tempArray[1].split(':');
-            const time = timeSplitted[0] + ':' + timeSplitted[1];
-            return time;
+            if (date != null) {
+                const tempArray = date.split(" ");
+                const timeSplitted = tempArray[1].split(':');
+                const time = timeSplitted[0] + ':' + timeSplitted[1];
+                return time;
+            } else {
+                return ''
+            }
         },
         //restituisce la data senza orario
         getDateFromDate: function (date) {
-            const tempArray = date.split(" ");
-            return tempArray[0];
+            if (date != null) {
+                const tempArray = date.split(" ");
+                return tempArray[0];
+            } else {
+                return ''
+            }
         },
         //restituisce un numero randomico tra 0 e la lunghezza del array
         getRandomNumberWithArrayLength: function(array) {
@@ -303,7 +311,11 @@ const app = new Vue({
             if(this.contacts[this.activeIndex].messages.length != 1) {
             this.contacts[this.activeIndex].messages.splice(index, 1);
             } else {
-                alert('Deve rimanere almeno un messagggio nella chat');
+                this.contacts[this.activeIndex].messages = [{
+                    date: null,
+                    message: "Scrivi  un messaggio per iniziare la chat",
+                    status: 'default'
+                }];
             }
             this.resetToggle();
         },
@@ -347,7 +359,14 @@ const app = new Vue({
         //aggiunge l'emoji al newMessage
         addEmojiToNewMessage: function(emoji) {
             this.newMessage += emoji;
-        }
+        },
+        //rimuove il messaggio di default
+        delDefaultMessage: function (array){
+            if (array[this.activeIndex].messages[0].status == 'default'){
+                array[this.activeIndex].messages.splice(0,1);
+            }
+        },
+        
     },
 });
 
