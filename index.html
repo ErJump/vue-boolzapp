@@ -79,7 +79,8 @@
                                 <img :src="completeImgPath(contacts[activeIndex].avatar)" alt="" class="rounded-circle">
                                 <div class="ms-2">
                                     <h5 class="mb-0 fs-6">{{contacts[activeIndex].name}}</h5>
-                                    <span v-if="contactIsReplying == false">{{'Ultimo accesso il ' + getDateFromDate(contacts[activeIndex].messages[contacts[activeIndex].messages.length - 1].date) + ' alle ore ' + getTimeFromDate(contacts[activeIndex].messages[contacts[activeIndex].messages.length - 1].date)}}</span>
+                                    <span v-if="contactIsReplying == false && contacts[activeIndex].messages[0].status == 'default'">Online</span>
+                                    <span v-else-if="contactIsReplying == false">{{'Ultimo accesso il ' + getDateFromDate(contacts[activeIndex].messages[contacts[activeIndex].messages.length - 1].date) + ' alle ore ' + getTimeFromDate(contacts[activeIndex].messages[contacts[activeIndex].messages.length - 1].date)}}</span>
                                     <span v-else>Sta scrivendo...</span>
                                 </div>
                             </div>
