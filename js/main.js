@@ -368,7 +368,6 @@ const app = new Vue({
                 array[this.activeIndex].messages.splice(0,1);
             }
         },
-        
     },
 });
 
