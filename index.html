@@ -114,7 +114,7 @@
                             @keyUp="isUserWriting()">
                             <i v-if='userIsWriting == false'class="fa-solid fa-microphone fs-4"></i>
                             <i v-else class="fa-solid fa-paper-plane fs-4"
-                            @click="pushNewUserMessage(newMessage); setDelayReply(contacts[activeIndex].messages[contacts[activeIndex].messages.length - 1]); isUserWriting()"></i>
+                            @click="pushNewUserMessage(newMessage); delDefaultMessage(contacts); setDelayReply(contacts[activeIndex].messages[contacts[activeIndex].messages.length - 1]); isUserWriting()"></i>
                         </div>
                     </div>
                 </div>
